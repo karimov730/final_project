@@ -1,89 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: "Inter Tight","Arial", serif;
+    font-family: "Inter Tight", "Arial", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-
-    background-color: lightgray;
+    background: url('../image/bg.avif') no-repeat center center/cover;
     padding-top: 100px;
-    background: url('../image/bg.avif');
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .container {
     background: white;
     width: 800px;
     border: 10px solid white;
 }
+
 .header {
     display: flex;
     height: 150px;
 }
+
 .title-block {
     position: relative;
+    width: 80%;
     height: 100%;
-    width: 80%;  
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('../image/picture.avif') no-repeat center center/cover;
     font-size: 30px;
-    background: url('../image/picture.avif') no-repeat
-    center center /cover;
     margin-right: 10px;
 }
-.title-block:after {
+
+.title-block::after {
     content: "";
     position: absolute;
-    Left: 0;
+    left: 0;
     top: 0;
     background: black;
-    height: 100%;
     width: 100%;
+    height: 100%;
     opacity: 0.6;
 }
+
 #title {
     position: relative;
     z-index: 1;
     font-size: 30px;
     font-weight: bold;
 }
+
 .userpic {
-    display: flex;
-    height: 100%;
     width: 20%;
-    background: url('../image/bluelock.jpg') no-repeat
-    center center / cover;
+    height: 100%;
+    background: url('../image/bluelock.jpg') no-repeat center center/cover;
 }
 
 nav ul {
     display: flex;
     background-color: rgb(223, 219, 219);
     margin: 10px 0;
+    padding: 0;
+    list-style: none;
 }
 
-nav li a{
+nav li a {
     display: inline-block;
     padding: 20px;
     text-decoration: none;
     color: rgb(87, 82, 82);
     font-weight: bold;
     border-right: 2px solid rgb(209, 203, 203);
-    transition: background .3s ease;
+    transition: background 0.3s ease;
 }
+
 nav li a:hover {
-    opacity: .15s ease;
     background: rgb(167, 163, 163);
 }
+
 .content-wrapper {
     display: flex;
 }
@@ -108,7 +113,7 @@ nav li a:hover {
     color: black;
     padding: 10px 0;
     cursor: pointer;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     font-weight: 500;
 }
 
@@ -125,7 +130,8 @@ footer {
 }
 
 .footer-wrapper {
-    min-width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -146,11 +152,12 @@ footer {
     margin: 5px;
 }
 
-
 .footer-social {
     display: flex;
     margin: 15px;
     gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-social a {
@@ -166,11 +173,10 @@ footer {
     transition: all 0.3s ease;
 }
 
-.social-btn:hover img{
+.social-btn:hover img {
     transform: scale(1.2);
     opacity: 0.85;
 }
-
 
 .footer-copy {
     margin-top: 15px;
@@ -180,95 +186,84 @@ footer {
 #school {
     text-decoration: none;
     color: black;
-    transition: color .15s;
+    transition: color 0.15s ease;
 }
 
 #school:hover {
     color: blue;
 }
 
-/* Сайт-визитка*/
-/* Для планшетов и экранов до 768px */
+/* Адаптив под планшеты */
 @media (max-width: 768px) {
-
     body {
-      padding-top: 20px;
+        padding-top: 20px;
     }
+
     .container {
-      width: 90%;
-      border-width: 5px;
+        width: 90%;
+        border-width: 5px;
     }
-  
-    header {
-      flex-direction: column;
-      height: auto;
+
+    .header {
+        flex-direction: column;
+        height: auto;
     }
-  
+
     .title-block,
     .userpic {
-      width: 100%;
-      height: 100px;
-      margin: 0;
+        width: 100%;
+        height: 100px;
+        margin: 0;
     }
-  
+
     nav ul {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     nav li a {
-      border-right: none;
-      border-bottom: 1px solid rgb(209, 203, 203);
-      justify-content: center;
+        border-right: none;
+        border-bottom: 1px solid rgb(209, 203, 203);
+        text-align: center;
     }
-  
+
     .content-wrapper {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .content,
     .sidebar {
-      width: 100%;
-      padding: 10px;
+        width: 100%;
+        padding: 10px;
     }
-  
+
     .footer-wrapper {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
-    .footer-social {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  }
-  
-  /* Для телефонов до 480px */
-  @media (max-width: 480px) {
+}
+
+/* Адаптив под телефоны */
+@media (max-width: 480px) {
     .title-block {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     h3 {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     nav li a {
-      padding: 15px;
-      font-size: 0.9em;
+        padding: 15px;
+        font-size: 0.9em;
     }
-  
-    #toggle-button {
-      font-size: 0.9em;
-      padding: 8px 16px;
-    }
-  
+
     .footer-logo {
-      font-size: 1.2em;
+        font-size: 1.2em;
     }
-  
+
     .social-btn img {
-      width: 24px;
-      height: 24px;
+        width: 24px;
+        height: 24px;
     }
-  }
+}
