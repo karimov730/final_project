@@ -8,7 +8,7 @@ body {
 
     background-color: lightgray;
     padding-top: 100px;
-    background: url('/image/bg.avif');
+    background: url('../image/bg.avif');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ h3 {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    background: url('/image/picture.avif') no-repeat
+    background: url('../image/picture.avif') no-repeat
     center center /cover;
     margin-right: 10px;
 }
@@ -61,7 +61,7 @@ h3 {
     display: flex;
     height: 100%;
     width: 20%;
-    background: url('/image/bluelock.jpg') no-repeat
+    background: url('../image/bluelock.jpg') no-repeat
     center center / cover;
 }
 
